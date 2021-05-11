@@ -23,6 +23,8 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    #run only when run-shell-commands steps finish
+    #needs: ["run-shell-commands"] 
     steps:
       - name: Directory PowerShell
         run: Get-Location
